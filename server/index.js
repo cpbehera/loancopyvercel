@@ -15,7 +15,7 @@ const PORT = 5000;
 
 // Middleware
 app.use(cors({
-  origin: "http://localhost:3000",
+  origin: "https://loancopyvercel.vercel.app",
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization", "Accept"]
