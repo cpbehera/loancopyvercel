@@ -13,7 +13,7 @@ const Cta = () => {
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/stats"); // ✅ Backend endpoint
+        const response = await fetch("https://loancopy-production.up.railway.app/api/stats"); // ✅ Backend endpoint
         const data = await response.json();
         setStats(data); // ✅ Update React state with data
       } catch (error) {
