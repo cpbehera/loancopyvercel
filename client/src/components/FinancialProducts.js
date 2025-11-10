@@ -39,7 +39,7 @@ const FinancialProducts = ({ onApplyClick }) => {
 
   // Fetch loan products from backend
   useEffect(() => {
-    fetch("http://localhost:5000/api/loan-products")
+    fetch("https://loancopy-production.up.railway.app/api/loan-products")
       .then((res) => res.json())
       .then((data) => setLoanProducts(data))
       .catch((err) => {
