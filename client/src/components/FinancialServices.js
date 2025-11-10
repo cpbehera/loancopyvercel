@@ -11,7 +11,7 @@ const LoanServices = ({ onApplyClick }) => {
   useEffect(() => {
     const fetchLoanServices = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/loan-services");
+        const response = await fetch("https://loancopy-production.up.railway.app/api/loan-services");
         if (!response.ok) throw new Error("Failed to fetch loan services");
         const data = await response.json();
         setLoanServices(data);
