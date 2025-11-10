@@ -32,7 +32,7 @@ const AdminPanel = () => {
       setLoading(true);
       const authToken = token || localStorage.getItem('auth_token');
       
-      const response = await fetch('http://localhost:5000/api/loan-applications', {
+      const response = await fetch('https://loancopy-production.up.railway.app/api/loan-applications', {
         headers: {
           'Authorization': `Bearer ${authToken}`
         }
@@ -74,7 +74,7 @@ const AdminPanel = () => {
     try {
       const token = localStorage.getItem('auth_token');
       if (token) {
-        await fetch('http://localhost:5000/api/auth/logout', {
+        await fetch('https://loancopy-production.up.railway.app/api/auth/logout', {
           method: 'POST',
           headers: {
             'Authorization': `Bearer ${token}`,
@@ -97,7 +97,7 @@ const AdminPanel = () => {
     try {
       const token = localStorage.getItem('auth_token');
       
-      const response = await fetch(`http://localhost:5000/api/loan-applications/${id}`, {
+      const response = await fetch(`https://loancopy-production.up.railway.app/api/loan-applications/${id}`, {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${token}`,
